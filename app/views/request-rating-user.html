@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit Rating page
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
+    </li>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/request-rating">Request a rating</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/request-rating-user">Request a rating from</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form class="form" action="/request-rating-confirmation" method="post">
+
+      <h1 class="govuk-heading-xl">
+        Request a rating from
+      </h1>
+      <div class="govuk-form-group"> 
+        <label class="govuk-heading-s" for="address-line-1">
+          Search for colleagues
+        </label>
+        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" placeholder="Colleague name"></div>
+      <div> 
+        <h1 class="govuk-heading-s">Jane Doe</h1>
+      <button class="govuk-button" data-module="govuk-button" value="Jane Doe" name="requested-user">
+        Submit a Rating
+      </button>
+      </div>
+      <div>
+      <h1 class="govuk-heading-s">Brian Smith</h1>
+      <button class="govuk-button" data-module="govuk-button" value="Brian Smith" name="requested-user">
+        Submit a Rating
+      </button>
+      </div>
+      <div>
+      <h1 class="govuk-heading-s">Sally Johnson</h1>
+      <button class="govuk-button" data-module="govuk-button" value="Sally Johnson" name="requested-user">
+        Submit a Rating
+      </button>
+      </div>
+
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

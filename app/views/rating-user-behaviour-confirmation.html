@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation for the rating a user pages
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
+    </li>
+    </li>
+<li class="govuk-breadcrumbs__list-item">
+  <a class="govuk-breadcrumbs__link" href="/submit-rating">Rating requests</a>
+</li>
+<li class="govuk-breadcrumbs__list-item">
+  <a class="govuk-breadcrumbs__link" href="/rating-user-behaviour">Rating a behaviour</a>
+</li>
+<li class="govuk-breadcrumbs__list-item">
+  <a class="govuk-breadcrumbs__link" href="/rating-user-behaviour-confirmation">Confirmation</a>
+</li>
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Double check your request</h1>
+
+      <h2 class="govuk-heading-m">You are sending the following feedback</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Behaviour
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['chosen-rating-data'] }}
+          </dd>
+        </div>
+        </dl>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Submit feedback to
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['chosen-user'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/submit-rating">
+              Change
+              <span class="govuk-visually-hidden">Submit feedback to</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your submitted rating
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['given-rating'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/rating-user-behaviour">
+              Change
+              <span class="govuk-visually-hidden">Behaviours you want feedback for</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional comments
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['more-detail'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/rating-user-behaviour">
+              Change
+              <span class="govuk-visually-hidden">Additional comments</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!-- <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p> -->
+
+      <form action="/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Sumbit rating
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+  
+{% endblock %}

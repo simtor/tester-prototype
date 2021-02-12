@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/users-behaviours">My behaviours</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/feedback-for-behaviour">My ratings for this behaviour</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">My ratings for in my team I am data driven</h1>
+
+      <h2 class="govuk-heading-m">{{ data['chosen-behaviour'] }}</h2>
+
+    </div>
+
+    <!-- Hardcoded data for prototype -->
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Jane Doe
+        </dt>
+        <dd class="govuk-summary-list__value">
+          John doe, you deserves a 5/5 for this behaviour, there has not been a time where you dont keep this in mind when working.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            5/5
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Brian Smith
+        </dt>
+        <dd class="govuk-summary-list__value">
+          You usually do a good job at keeping your behaviours in check, however on this one there is the rare occasion where you relax and forget about it.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            4/5
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sally Johnson
+        </dt>
+        <dd class="govuk-summary-list__value">
+          There has not been a time where you dont adhere to this behaviour, absolutely perfect.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            5/5
+        </dd>
+      </div>
+      
+    </dl>
+
+
+
+
+  </div>
+{% endblock %}

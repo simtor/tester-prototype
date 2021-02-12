@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The users behaviours grid page
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
+    </li>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/users-behaviours">My behaviours</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="govuk-heading-l">My behaviours</h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      <form class="form" action="/feedback-for-behaviour" method="post">
+
+        <!--IN MY TEAM-->
+
+        <div>
+          
+          <h1 class="govuk-heading-m">In my team</h1>
+
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="We practice what we preach, as what does not get measured does not get delivered on time and with quality. ​We use our Agile Delivery Framework (ADF) to measure our own work in progress and demand, so we can allocate resources effectively." name="chosen-behaviour">
+            I am Data Driven
+          </button>
+
+          
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="In my team i am connected to each other" name="chosen-behaviour">
+            I am connected to each other
+          </button>
+
+          
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="In my team i help our customers succeed" name="chosen-behaviour">
+            I help our customers succeed
+          </button>
+
+       </div>
+
+      </form>
+
+    </div>
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <form class="form" action="/feedback-for-behaviour" method="post">
+
+        <!--IN MY DIVISION-->
+
+        <div>
+          
+          <h1 class="govuk-heading-m">In my division</h1>
+
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="We drive data driven decision making in TD3 by supplying and empowering our colleagues with the information from projects, products and our customers. ​We supply our Agile Delivery outcome data (Sprint, Kanban, Retros) to continuously review and improve.​ We work closely with DKIM to ensure Delivery pre-aligns to our data and security principals.​ We measure Employee Satisfaction (ESAT), to see if the team members delivering a project understand their roles and have what they need in order to delivery successfully." name="chosen-behaviour">
+            I am Data Driven
+          </button>
+
+          
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="In my division i am connected to eachother" name="chosen-behaviour">
+            I am connected to each other
+          </button>
+
+          
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="In my division i help our customers succeed" name="chosen-behaviour">
+            I help our customers succeed
+          </button>
+
+        </div>
+
+
+      </form>
+
+    </div>
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <form class="form" action="/feedback-for-behaviour" method="post">
+
+       
+        <!--Outside of the division-->
+
+        <div>
+          
+          <h1 class="govuk-heading-m">Outside of the division  </h1>
+
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="We drive data driven delivery to our customers, giving them tangible value to measure against and understand what success looks like. We enable our customer to make informed data driven decisions integrative agile practices (product backlog prioritisation and refinements) and by the Design Thinking approach with BDG.​ We give our customer constant insights on our delivery journey via our delivery plans, demos, user research and our governance with EPMO.​ We help measure System Usability Survey (SUS) which asks people how easy it is to use new systems and if there are ways it could be improved.​" name="chosen-behaviour">
+            I am Data Driven
+          </button>
+
+          
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Outside of the division i am connected to eachother" name="chosen-behaviour">
+            I am connected to each other
+          </button>
+
+          
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Outside of the division i help our customers succeed" name="chosen-behaviour">
+            I help our customers succeed
+          </button>
+
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit Rating page
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
+    </li>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/submit-rating">Rating requests</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form class="form" action="/rating-user-behaviour" method="post">
+
+      <h1 class="govuk-heading-xl">
+        My rating requests
+      </h1>
+      <div>
+        <h1 class="govuk-heading-m">Jane Doe</h1>
+        <h1 class="govuk-heading-s">We practice what we preach, as what does not get measured does not get delivered on time and with quality. ​We use our Agile Delivery Framework (ADF) to measure our own work in progress and demand, so we can allocate resources effectively.</h1>
+      <button class="govuk-button" data-module="govuk-button" value="We practice what we preach, as what does not get measured does not get delivered on time and with quality. ​We use our Agile Delivery Framework (ADF) to measure our own work in progress and demand, so we can allocate resources effectively." name="chosen-rating-data">
+        Submit a Rating
+      </button>
+      </div>
+      <div>
+        <h1 class="govuk-heading-m">Brian Smith</h1>
+        <h1 class="govuk-heading-s">We drive data driven decision making in TD3 by supplying and empowering our colleagues with the information from projects, products and our customers. ​We supply our Agile Delivery outcome data (Sprint, Kanban, Retros) to continuously review and improve.​ We work closely with DKIM to ensure Delivery pre-aligns to our data and security principals.​ We measure Employee Satisfaction (ESAT), to see if the team members delivering a project understand their roles and have what they need in order to delivery successfully.</h1>
+      <button class="govuk-button" data-module="govuk-button" value="We drive data driven decision making in TD3 by supplying and empowering our colleagues with the information from projects, products and our customers. ​We supply our Agile Delivery outcome data (Sprint, Kanban, Retros) to continuously review and improve.​ We work closely with DKIM to ensure Delivery pre-aligns to our data and security principals.​ We measure Employee Satisfaction (ESAT), to see if the team members delivering a project understand their roles and have what they need in order to delivery successfully." name="chosen-rating-data">
+        Submit a Rating
+      </button>
+      </div>
+      <div>
+        <h1 class="govuk-heading-m">Sally Johnson</h1>
+        <h1 class="govuk-heading-s">We drive data driven delivery to our customers, giving them tangible value to measure against and understand what success looks like. We enable our customer to make informed data driven decisions integrative agile practices (product backlog prioritisation and refinements) and by the Design Thinking approach with BDG.​ We give our customer constant insights on our delivery journey via our delivery plans, demos, user research and our governance with EPMO.​ We help measure System Usability Survey (SUS) which asks people how easy it is to use new systems and if there are ways it could be improved.</h1>
+      <button class="govuk-button" data-module="govuk-button" value="We drive data driven delivery to our customers, giving them tangible value to measure against and understand what success looks like. We enable our customer to make informed data driven decisions integrative agile practices (product backlog prioritisation and refinements) and by the Design Thinking approach with BDG.​ We give our customer constant insights on our delivery journey via our delivery plans, demos, user research and our governance with EPMO.​ We help measure System Usability Survey (SUS) which asks people how easy it is to use new systems and if there are ways it could be improved." name="chosen-rating-data">
+        Submit a Rating 
+      </button>
+      </div>
+
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Request a rating page
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/request-rating">Request a rating</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Request a rating for</h1>
+
+<form class="form" action="/request-rating-user" method="post">
+    
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="select-behaviour-for-rating">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  In my team
+                </h1>
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour" name="requested-behaviour" type="checkbox" value="In my team I am data driven"{{ checked("requested-behaviour", "In my team I am data driven") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour">
+                    I am Data Driven
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour-2" name="requested-behaviour" type="checkbox" value="In my team I am connected to each other" {{ checked("requested-behaviour", "In my team I am connected to each other") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour-2">
+                    I am connected to each other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour-3" name="requested-behaviour" type="checkbox" value="In my team I help our customers succeed" {{ checked("requested-behaviour", "In my team I help our customers succeed") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour-3">
+                    I help our customers succeed
+                  </label>
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+
+    </div>
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="select-behaviour-for-rating">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  In my division
+                </h1>
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour-4" name="requested-behaviour" type="checkbox" value="In my division I am data driven" {{ checked("requested-behaviour", "In my division I am data driven") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour-4">
+                    I am Data Driven
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour-5" name="requested-behaviour" type="checkbox" value="In my division I am connected to each other" {{ checked("requested-behaviour", "In my division I am connected to each other") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour-5">
+                    I am connected to each other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour-6" name="requested-behaviour" type="checkbox" value="In my division I help our customers succeed" {{ checked("requested-behaviour", "In my division I help our customers succeed") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour-6"> 
+                    I help our customers succeed
+                  </label>
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+
+    </div>
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="select-behaviour-for-rating">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Outside of my division
+                </h1>
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour-7" name="requested-behaviour" type="checkbox" value="Outside of the division I am data driven" {{ checked("requested-behaviour", "Outside of the division I am data driven") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour-7">
+                    I am Data Driven
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour-8" name="requested-behaviour" type="checkbox" value="Outside of the division I am connected to each other" {{ checked("requested-behaviour", "Outside of the division I am connected to each other") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour-8">
+                    I am connected to each other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="requested-behaviour-9" name="requested-behaviour" type="checkbox" value="Outside of the division I help our customers succeed" {{ checked("requested-behaviour", "Outside of the division I help our customers succeed") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="requested-behaviour-9">
+                    I help our customers succeed
+                  </label>
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+{% endblock %}

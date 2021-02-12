@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page for requesting a rating
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/request-rating">Request a rating</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/request-rating-user">Request a rating from</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/request-rating-confirmation">Confirmation</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Double check your request</h1>
+
+      <h2 class="govuk-heading-m">Recieve a rating / feedback </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Recieve feedback from
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['requested-user'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/request-rating">
+              Change
+              <span class="govuk-visually-hidden">Recieve feedback from</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Behaviours you want feedback for
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['requested-behaviour'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/request-rating">
+              Change
+              <span class="govuk-visually-hidden">Behaviours you want feedback for</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Request rating
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+  
+{% endblock %}

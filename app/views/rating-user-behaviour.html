@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Rating a users behaviours page
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
+    </li>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/submit-rating">Rating requests</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/rating-user-behaviour">Rating a behaviour</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<form class="form" action="/rating-user-behaviour-confirmation" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Behaviour
+      </h1>
+      <h2 class="govuk-heading-m">{{ data['chosen-rating-data'] }}</h2>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Select a Rating
+            </h1>
+          </legend>
+
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="given-rating" name="given-rating" type="radio" value="1" {{ checked("given-rating", "1") }}>
+              <label class="govuk-label govuk-radios__label" for="given-rating">
+                1
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="given-rating-2" name="given-rating" type="radio" value="2" {{ checked("given-rating", "2") }} >
+              <label class="govuk-label govuk-radios__label" for="given-rating-2">
+                2
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="given-rating-3" name="given-rating" type="radio" value="3" {{ checked("given-rating", "3") }}>
+                <label class="govuk-label govuk-radios__label" for="given-rating-3">
+                  3
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="given-rating-4" name="given-rating" type="radio" value="4" {{ checked("given-rating", "4") }}>
+                <label class="govuk-label govuk-radios__label" for="given-rating-4">
+                  4
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="given-rating-5" name="given-rating" type="radio" value="5" {{ checked("given-rating", "5") }}>
+                <label class="govuk-label govuk-radios__label" for="given-rating-5">
+                  5
+                </label>
+              </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+            Additional Comments
+          </label>
+        </h1>
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"> {{ data['more-detail'] }}</textarea>
+      </div>
+    </div>
+    <button class="govuk-button" data-module="govuk-button" value="Submit a Rating" name="chosen-rating">
+        Submit a Rating
+      </button>
+  </div>
+</form>
+
+{% endblock %}
